@@ -25,9 +25,7 @@ class Adapt {
 
   Adapt._();
 
-  factory Adapt() {
-    return _instance!;
-  }
+  factory Adapt() => _instance!;
 
   /// [初始化]
   static void init(BuildContext context) {
@@ -68,11 +66,11 @@ class Adapt {
   get heightRatio => _dpHeight / designHeight;
 
   /// [主要用于widget的width、height、radius等的适配]
-  num adaptPx(double value) => value * widthRatio;
+  double adaptPx(double value) => value * widthRatio;
 
   /// [主要用于widget的padding、madding等的适配]
-  num adaptPm(double value) => value * heightRatio;
+  double adaptPm(double value) => value * heightRatio;
 
   /// [主要用于字体适配]
-  num adaptSp(double fontSize) => adaptPx(fontSize) / _fontRatio;
+  double adaptSp(double fontSize) => adaptPx(fontSize) / _fontRatio;
 }
