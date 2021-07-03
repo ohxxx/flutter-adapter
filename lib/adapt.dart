@@ -65,12 +65,23 @@ class Adapt {
   /// [高度比]
   get heightRatio => _dpHeight / designHeight;
 
-  /// [主要用于widget的width、height、radius等的适配]
+  /// 主要用于流式布局的适配，既使用宽度比进行页面适配
+  ///
+  /// 对于widget的`width`、`height`、`radius`、`padding`、`madding`等的适配
   double adaptPx(double value) => value * widthRatio;
 
-  /// [主要用于widget的padding、madding等的适配]
+  /// 主要用整屏布局适配，既使用高度比进行页面适配.
+  /// 但是对于整屏显示内容不适用与全部使用 [adaptPm(x)] 进行适配，应当与[adaptPx(x)]结合使用
+  /// * 例如：
+  ///   *  width、height使用adaptPx适配
+  ///   *  padding、madding使用adaptPm适配
+  ///
+  /// 对于于widget的`width`、`height`、`radius`、`padding`、`madding`等的适配
+  ///
   double adaptPm(double value) => value * heightRatio;
 
-  /// [主要用于字体适配]
+  /// 主要用于字体适配，可设置`fontRatio`进行字体比例设置
+  ///
+  /// 对于`fontSize`适配
   double adaptSp(double fontSize) => adaptPx(fontSize) / _fontRatio;
 }
