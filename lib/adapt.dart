@@ -77,8 +77,15 @@ class Adapt {
   ///   *  padding、madding使用adaptPm适配
   ///
   /// 对于于widget的`width`、`height`、`radius`、`padding`、`madding`等的适配
-  ///
   double adaptPm(double value) => value * heightRatio;
+
+  /// 动态适配
+  /// 适用于公共组件对于不同布局的适配
+  ///
+  /// `flag`根据参数进行动态换算处理，true使用[adaptPm]，false使用[adaptPx]
+  /// `value`需要适配的尺寸
+  double adaptDynamic(bool flag, double value) =>
+      flag ? adaptPm(value) : adaptPx(value);
 
   /// 主要用于字体适配，可设置`fontRatio`进行字体比例设置
   ///

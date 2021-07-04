@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'adapt.dart';
+import 'common.dart';
 
 class FlowLayout extends StatefulWidget {
   const FlowLayout({Key? key}) : super(key: key);
@@ -10,25 +11,6 @@ class FlowLayout extends StatefulWidget {
 }
 
 class _FlowLayoutState extends State<FlowLayout> {
-  final Color darkColor = Color(0x33000000);
-  final Color lightColor = Color(0x1a000000);
-
-  /// 线块组件
-  Widget _lineBlock(Color color) {
-    return Container(
-      width: Adapt().adaptPx(220),
-      height: Adapt().adaptPx(20),
-      margin: EdgeInsets.only(
-        bottom: Adapt().adaptPx(12),
-        left: Adapt().adaptPx(6),
-      ),
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(Adapt().adaptPx(5)),
-      ),
-    );
-  }
-
   /// card小组件
   Widget _customCard() {
     return Container(
@@ -57,9 +39,9 @@ class _FlowLayoutState extends State<FlowLayout> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                _lineBlock(darkColor),
-                _lineBlock(lightColor),
-                _lineBlock(lightColor),
+                lineBlock(color: darkColor),
+                lineBlock(color: lightColor),
+                lineBlock(color: lightColor),
               ],
             ),
           )
