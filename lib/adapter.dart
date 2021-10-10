@@ -68,27 +68,26 @@ class Adapter {
   /// 主要用于流式布局的适配，既使用宽度比进行页面适配
   ///
   /// 对于widget的`width`、`height`、`radius`、`padding`、`madding`等的适配
-  double adapterPx(double value) => value * widthRatio;
+  double pw(double value) => value * widthRatio;
 
   /// 主要用整屏布局适配，既使用高度比进行页面适配.
-  /// 但是对于整屏显示内容不适用与全部使用 [adapterPm(x)] 进行适配，应当与[adapterPx(x)]结合使用
+  /// 但是对于整屏显示内容不适用与全部使用 [ph(x)] 进行适配，应当与[pw(x)]结合使用
   /// * 例如：
-  ///   *  width、height使用adapterPx适配
-  ///   *  padding、madding使用adapterPm适配
+  ///   *  width、height使用pw适配
+  ///   *  padding、madding使用ph适配
   ///
   /// 对于于widget的`width`、`height`、`radius`、`padding`、`madding`等的适配
-  double adapterPm(double value) => value * heightRatio;
+  double ph(double value) => value * heightRatio;
 
   /// 动态适配
   /// 适用于公共组件对于不同布局的适配
   ///
-  /// `flag`根据参数进行动态换算处理，true使用[adapterPm]，false使用[adapterPx]
+  /// `flag`根据参数进行动态换算处理，true使用[ph]，false使用[pw]
   /// `value`需要适配的尺寸
-  double adapterDynamic(bool flag, double value) =>
-      flag ? adapterPm(value) : adapterPx(value);
+  double variable(bool flag, double value) => flag ? ph(value) : pw(value);
 
   /// 主要用于字体适配，可设置`fontRatio`进行字体比例设置
   ///
   /// 对于`fontSize`适配
-  double adapterSp(double fontSize) => adapterPx(fontSize) / _fontRatio;
+  double sp(double fontSize) => pw(fontSize) / _fontRatio;
 }

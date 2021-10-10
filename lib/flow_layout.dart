@@ -14,27 +14,27 @@ class _FlowLayoutState extends State<FlowLayout> {
   /// card小组件
   Widget _customCard() {
     return Container(
-      width: Adapter().adapterPx(375),
-      height: Adapter().adapterPx(150),
-      margin: EdgeInsets.all(Adapter().adapterPx(10)),
+      width: Adapter().pw(375),
+      height: Adapter().pw(150),
+      margin: EdgeInsets.all(Adapter().pw(10)),
       decoration: BoxDecoration(
         color: Color(0x26000000),
-        borderRadius: BorderRadius.circular(Adapter().adapterPx(30)),
+        borderRadius: BorderRadius.circular(Adapter().pw(30)),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: Adapter().adapterPx(72),
-            height: Adapter().adapterPx(72),
-            margin: EdgeInsets.all(Adapter().adapterPx(15)),
+            width: Adapter().pw(72),
+            height: Adapter().pw(72),
+            margin: EdgeInsets.all(Adapter().pw(15)),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: Color(0x33000000),
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: Adapter().adapterPx(15)),
+            padding: EdgeInsets.only(top: Adapter().pw(15)),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,

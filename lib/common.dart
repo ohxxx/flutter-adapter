@@ -20,17 +20,17 @@ Widget lineBlock({
   bool isAdapt = false,
 }) {
   return Container(
-    width: Adapter().adapterPx(width),
-    height: Adapter().adapterDynamic(isAdapt, 20),
+    width: Adapter().pw(width),
+    height: Adapter().variable(isAdapt, 20),
     margin: EdgeInsets.only(
-      bottom: Adapter().adapterDynamic(isAdapt, margin.bottom),
-      left: Adapter().adapterDynamic(isAdapt, margin.left),
-      top: Adapter().adapterDynamic(isAdapt, margin.top),
-      right: Adapter().adapterDynamic(isAdapt, margin.right),
+      bottom: Adapter().variable(isAdapt, margin.bottom),
+      left: Adapter().variable(isAdapt, margin.left),
+      top: Adapter().variable(isAdapt, margin.top),
+      right: Adapter().variable(isAdapt, margin.right),
     ),
     decoration: BoxDecoration(
       color: color,
-      borderRadius: BorderRadius.circular(Adapter().adapterPx(5)),
+      borderRadius: BorderRadius.circular(Adapter().pw(5)),
     ),
   );
 }

@@ -38,9 +38,9 @@ class _MyHomePageState extends State<MyHomePage> {
     return GestureDetector(
       onTap: () => onTap(),
       child: Container(
-        width: Adapter().adapterPx(375),
-        height: Adapter().adapterPx(50),
-        margin: EdgeInsets.only(top: Adapter().adapterPx(10)),
+        width: Adapter().pw(375),
+        height: Adapter().pw(50),
+        margin: EdgeInsets.only(top: Adapter().pw(10)),
         decoration: BoxDecoration(
           color: Color(0x26000000),
         ),
@@ -58,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title,
         style: GoogleFonts.goldman(
           color: Colors.white,
-          fontSize: Adapter().adapterSp(16),
+          fontSize: Adapter().sp(16),
         ),
       ),
     );

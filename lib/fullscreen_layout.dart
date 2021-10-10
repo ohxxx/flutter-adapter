@@ -14,9 +14,9 @@ class _FullScreenLayoutState extends State<FullScreenLayout> {
   /// 圆形组件
   Widget commonCircleWidget() {
     return Container(
-      width: Adapter().adapterPx(70),
-      height: Adapter().adapterPm(70),
-      margin: EdgeInsets.only(top: Adapter().adapterPm(15)),
+      width: Adapter().pw(70),
+      height: Adapter().ph(70),
+      margin: EdgeInsets.only(top: Adapter().ph(15)),
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         color: Color(0x33000000),
@@ -66,12 +66,12 @@ class _FullScreenLayoutState extends State<FullScreenLayout> {
         child: Column(
           children: [
             Container(
-              width: Adapter().adapterPx(375),
-              height: Adapter().adapterPm(150),
-              margin: EdgeInsets.all(Adapter().adapterPm(10)),
+              width: Adapter().pw(375),
+              height: Adapter().ph(150),
+              margin: EdgeInsets.all(Adapter().ph(10)),
               decoration: BoxDecoration(
                 color: Color(0x26000000),
-                borderRadius: BorderRadius.circular(Adapter().adapterPx(30)),
+                borderRadius: BorderRadius.circular(Adapter().pw(30)),
               ),
               child: Column(children: [
                 commonLineWidget(top: 15),
@@ -81,12 +81,12 @@ class _FullScreenLayoutState extends State<FullScreenLayout> {
               ]),
             ),
             Container(
-              width: Adapter().adapterPx(375),
-              height: Adapter().adapterPm(370),
-              margin: EdgeInsets.all(Adapter().adapterPm(10)),
+              width: Adapter().pw(375),
+              height: Adapter().ph(370),
+              margin: EdgeInsets.all(Adapter().ph(10)),
               decoration: BoxDecoration(
                 color: Color(0x26000000),
-                borderRadius: BorderRadius.circular(Adapter().adapterPx(30)),
+                borderRadius: BorderRadius.circular(Adapter().pw(30)),
               ),
 
               /// 此处布局不适用GridView布局
