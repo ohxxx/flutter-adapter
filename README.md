@@ -1,4 +1,4 @@
-# flutter_adapt
+# flutter_adapter
 
 #### 基于 flutter 的屏幕适配方案
 
