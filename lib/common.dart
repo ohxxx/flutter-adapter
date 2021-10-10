@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'adapt.dart';
+import 'adapter.dart';
 
 const Color darkColor = Color(0x33000000);
 const Color lightColor = Color(0x1a000000);
@@ -20,17 +20,17 @@ Widget lineBlock({
   bool isAdapt = false,
 }) {
   return Container(
-    width: Adapt().adaptPx(width),
-    height: Adapt().adaptDynamic(isAdapt, 20),
+    width: Adapter().adapterPx(width),
+    height: Adapter().adapterDynamic(isAdapt, 20),
     margin: EdgeInsets.only(
-      bottom: Adapt().adaptDynamic(isAdapt, margin.bottom),
-      left: Adapt().adaptDynamic(isAdapt, margin.left),
-      top: Adapt().adaptDynamic(isAdapt, margin.top),
-      right: Adapt().adaptDynamic(isAdapt, margin.right),
+      bottom: Adapter().adapterDynamic(isAdapt, margin.bottom),
+      left: Adapter().adapterDynamic(isAdapt, margin.left),
+      top: Adapter().adapterDynamic(isAdapt, margin.top),
+      right: Adapter().adapterDynamic(isAdapt, margin.right),
     ),
     decoration: BoxDecoration(
       color: color,
-      borderRadius: BorderRadius.circular(Adapt().adaptPx(5)),
+      borderRadius: BorderRadius.circular(Adapter().adapterPx(5)),
     ),
   );
 }

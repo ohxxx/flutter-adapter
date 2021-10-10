@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'adapt.dart';
+import 'adapter.dart';
 import 'common.dart';
 
 class FullScreenLayout extends StatefulWidget {
@@ -14,9 +14,9 @@ class _FullScreenLayoutState extends State<FullScreenLayout> {
   /// 圆形组件
   Widget commonCircleWidget() {
     return Container(
-      width: Adapt().adaptPx(70),
-      height: Adapt().adaptPm(70),
-      margin: EdgeInsets.only(top: Adapt().adaptPm(15)),
+      width: Adapter().adapterPx(70),
+      height: Adapter().adapterPm(70),
+      margin: EdgeInsets.only(top: Adapter().adapterPm(15)),
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         color: Color(0x33000000),
@@ -66,12 +66,12 @@ class _FullScreenLayoutState extends State<FullScreenLayout> {
         child: Column(
           children: [
             Container(
-              width: Adapt().adaptPx(375),
-              height: Adapt().adaptPm(150),
-              margin: EdgeInsets.all(Adapt().adaptPm(10)),
+              width: Adapter().adapterPx(375),
+              height: Adapter().adapterPm(150),
+              margin: EdgeInsets.all(Adapter().adapterPm(10)),
               decoration: BoxDecoration(
                 color: Color(0x26000000),
-                borderRadius: BorderRadius.circular(Adapt().adaptPx(30)),
+                borderRadius: BorderRadius.circular(Adapter().adapterPx(30)),
               ),
               child: Column(children: [
                 commonLineWidget(top: 15),
@@ -81,12 +81,12 @@ class _FullScreenLayoutState extends State<FullScreenLayout> {
               ]),
             ),
             Container(
-              width: Adapt().adaptPx(375),
-              height: Adapt().adaptPm(370),
-              margin: EdgeInsets.all(Adapt().adaptPm(10)),
+              width: Adapter().adapterPx(375),
+              height: Adapter().adapterPm(370),
+              margin: EdgeInsets.all(Adapter().adapterPm(10)),
               decoration: BoxDecoration(
                 color: Color(0x26000000),
-                borderRadius: BorderRadius.circular(Adapt().adaptPx(30)),
+                borderRadius: BorderRadius.circular(Adapter().adapterPx(30)),
               ),
 
               /// 此处布局不适用GridView布局

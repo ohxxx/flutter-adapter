@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_adapt/adapt.dart';
+import 'package:flutter_adapter/adapter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'flow_layout.dart';
@@ -38,9 +38,9 @@ class _MyHomePageState extends State<MyHomePage> {
     return GestureDetector(
       onTap: () => onTap(),
       child: Container(
-        width: Adapt().adaptPx(375),
-        height: Adapt().adaptPx(50),
-        margin: EdgeInsets.only(top: Adapt().adaptPx(10)),
+        width: Adapter().adapterPx(375),
+        height: Adapter().adapterPx(50),
+        margin: EdgeInsets.only(top: Adapter().adapterPx(10)),
         decoration: BoxDecoration(
           color: Color(0x26000000),
         ),
@@ -58,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title,
         style: GoogleFonts.goldman(
           color: Colors.white,
-          fontSize: Adapt().adaptSp(16),
+          fontSize: Adapter().adapterSp(16),
         ),
       ),
     );
@@ -66,15 +66,15 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    /// Adapt 初始化
+    /// Adapter 初始化
     ///
     /// 上下文传入进行媒体查询
-    Adapt.init(context);
+    Adapter.init(context);
 
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Flutter Adapt',
+          'Flutter Adapter',
           style: GoogleFonts.goldman(),
         ),
         elevation: 0,

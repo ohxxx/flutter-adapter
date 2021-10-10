@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.flutter_adapt">
+    package="com.example.flutter_adapter">
    <application
-        android:label="flutter_adapt"
+        android:label="flutter_adapter"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

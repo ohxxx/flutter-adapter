@@ -1,6 +1,6 @@
 {
-    "name": "flutter_adapt",
-    "short_name": "flutter_adapt",
+    "name": "flutter_adapter",
+    "short_name": "flutter_adapter",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

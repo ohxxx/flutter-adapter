@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'adapt.dart';
+import 'adapter.dart';
 import 'common.dart';
 
 class FlowLayout extends StatefulWidget {
@@ -14,27 +14,27 @@ class _FlowLayoutState extends State<FlowLayout> {
   /// card小组件
   Widget _customCard() {
     return Container(
-      width: Adapt().adaptPx(375),
-      height: Adapt().adaptPx(150),
-      margin: EdgeInsets.all(Adapt().adaptPx(10)),
+      width: Adapter().adapterPx(375),
+      height: Adapter().adapterPx(150),
+      margin: EdgeInsets.all(Adapter().adapterPx(10)),
       decoration: BoxDecoration(
         color: Color(0x26000000),
-        borderRadius: BorderRadius.circular(Adapt().adaptPx(30)),
+        borderRadius: BorderRadius.circular(Adapter().adapterPx(30)),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: Adapt().adaptPx(72),
-            height: Adapt().adaptPx(72),
-            margin: EdgeInsets.all(Adapt().adaptPx(15)),
+            width: Adapter().adapterPx(72),
+            height: Adapter().adapterPx(72),
+            margin: EdgeInsets.all(Adapter().adapterPx(15)),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: Color(0x33000000),
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: Adapt().adaptPx(15)),
+            padding: EdgeInsets.only(top: Adapter().adapterPx(15)),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,

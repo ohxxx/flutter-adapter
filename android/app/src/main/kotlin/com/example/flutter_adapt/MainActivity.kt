@@ -1,4 +1,4 @@
-package com.example.flutter_adapt
+package com.example.flutter_adapter
 
 import io.flutter.embedding.android.FlutterActivity
 
